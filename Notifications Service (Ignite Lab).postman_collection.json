@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "6f82ab22-8641-4aac-a29d-bfd44b16bd5b",
+		"name": "Notifications Service (Ignite Lab)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21331415"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Nova notificação de teste!\",\r\n    \"category\": \"teste\",\r\n    \"recipientId\": \"{{$randomUUID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/notifications",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Notification",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/notifications/:id/cancel",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"cancel"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "12da857b-5f66-4869-806d-9ee2af7e3819"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/notifications/from/:recipientId",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/notifications/count/from/:recipientId",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications",
+						"count",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Notifications",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/notifications/:id/read",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"read"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unread Notifications",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/notifications/:id/unread",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"unread"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
