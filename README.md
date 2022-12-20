@@ -1,4 +1,6 @@
-# :pencil: Description
+<h1 align="center">Notifications service</h1>
+
+## :pencil: Description
 
 Notification service developed with NestJS and Prisma through Ignite Lab from Rocketseat :rocket:
 
@@ -48,14 +50,14 @@ $ npm run test:cov
 
 Import routes from file "Notifications Service (Ignite Lab).postman_collection.json"
 
-### :space_invader: Technologies used
+## :space_invader: Technologies used
 
 - TypeScript
 - NestJS
 - Prisma
 - Jest
 
-### :man_technologist: Author
+## :man_technologist: Author
 
 Guilherme Paluri
 https://www.linkedin.com/in/guilherme-paluri/
