@@ -60,4 +60,5 @@ Import routes from file "Notifications Service (Ignite Lab).postman_collection.j
 ## :man_technologist: Author
 
 Guilherme Paluri
+
 https://www.linkedin.com/in/guilherme-paluri/
